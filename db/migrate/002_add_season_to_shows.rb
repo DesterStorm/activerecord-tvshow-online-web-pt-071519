@@ -1,11 +1,7 @@
 class CreateShows < ActiveRecord::Migration[5.2]
   def change
-    create_column :shows do |t|
-      #primary key of :id is created for us!
-      t.string :name
-      t.string :day
-      t.string :network
-      t.integer :rating
+    add_column :shows do |s|
+      s.string :season
     end
   end
 end
